@@ -126,29 +126,6 @@ main {
     min-width: fit-content;
     padding: 10px;
 }
-
-/* About Me */
-#about {
-    line-height: 1.6;
-}
-#sosial_links {
-    background-color: rgba(240, 248, 255, 0);
-    border-radius: 12px;
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 8px;
-}
-#sosial_links a {
-    display: inherit;
-}
-#sosial_links img {
-    width: 40px;
-}
 #programming_skills li::before {
     content: "";
     display: inline-block;
@@ -176,4 +153,70 @@ main {
 }
 #programming_skills li.css::before {
     background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg')
+}
+
+
+
+/* About Me */
+#about {
+    line-height: 1.6;
+}
+#sosial_links {
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 12px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+#sosial_links a {
+    display: inherit;
+}
+#sosial_links img {
+    width: 40px;
+}
+#basic_info {
+    padding: 10px;
+}
+#basic_info span {
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: larger;
+}
+#about .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+#profile_image {
+    width: 250px;
+    height: 300px;
+    border-radius: 24px;
+    border: solid white;
+    overflow: hidden;
+}
+#profile_image img {
+    width: 100%;
+    position: relative;
+    top: -30px;
+    border-radius: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container a {
+    text-align: center;
+}
+.container a img {
+    width: 50px;
+}
+#bio {
+    text-align: justify;
 }

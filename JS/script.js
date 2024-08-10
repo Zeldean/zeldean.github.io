@@ -1,4 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // JavaScript for future interactive features
-    console.log('Website Loaded');
-});
+import { calculateAge } from "./age-calculation.mjs";
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ageDisplay = document.getElementById('age_display');
+    const age = calculateAge('2004/11/22');
+    ageDisplay.textContent = age;
+
+})

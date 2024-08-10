@@ -10,7 +10,8 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
           
     <!-- JS -->
-    <script src="JS/script.js"></script>
+    <script src="JS/script.js" type="module"></script>
+    <script src="JS/page_load.js"></script>
 </head>
 <body>
     <header>
@@ -37,13 +38,26 @@
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>
-                    I am a second-year student at Belgium Campus ITversity pursuing a Bachelor of Computing with a focus on Software Engineering. My greatest dream is to contribute in the field of Artificial Intelligence and make the world a better place. I am passionate about technology, innovation, and I am willing to work hard to achieve my goals.
-                </p>
-                <div id="sosial_links">
-                    <a href="https://github.com/Zeldean"><img src="IMG/1298743_github_git_logo_social_icon.png" alt="gitHub Icon"></a>
-          
+                <div class="top">
+                    <div id="basic_info">
+                        <p class="item">Full Name:<br><span class="info">Dean Jacobus Andreas van Zyl</span></p>
+                        <p class="item">Nationality: <span class="info">South Africa</span></p>
+                        <p class="item">Age: <span class="info" id="age_display">0</span></p>
+                    </div>
+                    <div class="image" id="profile_image">
+                        <img src="IMG/profile2.jpg" alt="Head and shoulders photo of Dean">
+                    </div>
                 </div>
+                
+                <div class="bottom">
+                    <p id="bio">
+                        I am curently a second-year student at Belgium Campus ITversity pursuing a Bachelor of Computing with a focus on Software Engineering. I am expesialy intrested in Artificial Intelligence and aspire to become an AI Engineer. I am passionate about technology, innovation, and I am willing to work hard to achieve my goals.
+                    </p>
+                    <div id="sosial_links">
+                        <a href="https://github.com/Zeldean"><img src="IMG/1298743_github_git_logo_social_icon.png" alt="gitHub Icon"></a>
+                    </div>
+                </div>
+                <a href="" class="more_page_link"><img src="IMG/3671821_more_navigation_icon.png" alt=""></a>
             </div>
         </section>
         <section id="skills">
