@@ -1,9 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 body {
     font-family: Arial, sans-serif;
+    color: white;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
 }
 
 .container {
@@ -56,6 +58,9 @@ nav ul li a {
 
 section {
     padding: 20px 0;
+    background-color: #0e0a13bd;
+    border-radius: 12px;
+    margin: 10px 0;
 }
 
 footer {
@@ -67,6 +72,10 @@ footer {
 }
 
 h2 {
+    text-align: center;
+    color: #333;
+}
+h3 {
     text-align: center;
     color: #333;
 }
@@ -98,4 +107,24 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+
+
+/* Skills */
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#skills_heading {
+    grid-column: 1 / -1;
+}
+
+
+
+
+main {
+    width: 74%;
+    margin: 0 auto;
 }
