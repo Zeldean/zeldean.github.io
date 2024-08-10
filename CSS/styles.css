@@ -5,7 +5,6 @@
 body {
     font-family: Arial, sans-serif;
     color: white;
-    line-height: 1.6;
 }
 
 .container {
@@ -110,21 +109,60 @@ a:hover {
 }
 
 
-
-
-/* Skills */
-#skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-#skills_heading {
-    grid-column: 1 / -1;
-}
-
-
-
-
+/* Home page */
 main {
     width: 74%;
     margin: 0 auto;
+}
+
+/* Skills */
+#skills_block {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.skills_block {
+    min-width: fit-content;
+    padding: 10px;
+}
+
+/* About Me */
+#about {
+    line-height: 1.6;
+}
+#sosial_links {
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 12px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+#sosial_links a {
+    display: inherit;
+}
+#sosial_links img {
+    width: 40px;
+}
+#programming_skills li::before {
+    content: "";
+    display: inline-block;
+    width: 16px; /* adjust the width to match your icon size */
+    height: 16px; /* adjust the height to match your icon size */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 8px; /* add some spacing between the icon and the text */
+}
+
+#programming_skills li.python::before {
+    background-image: url('python-icon.png');
+}
+
+#programming_skills li.javascript::before {
+    background-image: url('../IMG/javascript-icon.png')
 }
