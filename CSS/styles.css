@@ -190,9 +190,11 @@ main {
 #about .top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0;
+    justify-content: start;
+    margin: 20px auto;
+    max-width: 800px; /* Or another value that fits your design */
 }
+
 #profile_image {
     width: 250px;
     height: 300px;
