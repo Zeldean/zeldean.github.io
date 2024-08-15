@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
-    <!-- <script src="JS/page_load.js"></script> -->
+    <!-- Styling -->
+    <link rel="stylesheet" href="CSS/about-me.css">
+    <link rel="stylesheet" href="CSS/background.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- JS -->
+    <script src="JS/script.js" type="module"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="top">
+            <div class="image" id="profile_image">
+                <img src="IMG/profile2.jpg" alt="Head and shoulders photo of Dean">
+            </div>
+            <div id="basic_info">
+                <div id="basic_info">
+                    <p class="item">Full Name: <span class="info">Dean Jacobus Andreas van Zyl</span></p><br>
+                    <p class="item">Nationality: <span class="info">South African</span></p><br>
+                    <p class="item">Languages: <span class="info">English, Afrikaans</span></p><br>
+                    <p class="item">Current Location: <span class="info">Pretoria, South Africa</span></p><br>
+                    <p class="item">Timezone: <span class="info">SAST (GMT+2)</span></p><br>
+                    <p class="item">Age: <span class="info" id="age_display">0</span></p><br>
+                    <p class="item">Gender: <span class="info">Male</span></p>
+                </div>
+                
+            </div>
+
+        </div>
+        
+        <div class="bottom">
+            <div id="bio">
+                <p>
+                    As a second-year student at Belgium Campus ITversity, I am pursuing a Bachelor of Computing degree specialising in Software Engineering. My academic pursuits are driven by a profound interest in technology, particularly in the field of Artificial Intelligence. My career goals revolve around achieving proficiency as an AI Engineer and utilizing my expertise to contribute to cutting-edge technological advancements. I am wholeheartedly enthusiastic about taking on challenges and fully committed to putting forth dedicated efforts to turn my ambitions into reality.
+                </p>
+            </div>
+            <div id="previous_bios">
+                <button id="dropdown_btn">View Previous Bios</button>
+                <div id="dropdown_content">
+                    <p>Bio from 2023: [Short Description]</p>
+                    <p>Bio from 2022: [Short Description]</p>
+                </div>
+            </div>
+            <div id="sosial_links">
+                <a href="https://github.com/Zeldean"><img src="IMG/1298743_github_git_logo_social_icon.png" alt="gitHub Icon"></a>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>
