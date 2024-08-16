@@ -44,7 +44,11 @@
     margin: 20px auto;
     max-width: 800px; /* Or another value that fits your design */
 }
-
+.container {
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
 #profile_image {
     
     width: calc(var(--image-width) * 2.5);
