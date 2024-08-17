@@ -12,32 +12,23 @@ const data = [80, 90, 85, 70, 95]; // Example data
 function drawRadarChart() {
     const numAxes = labels.length;
     const angleStep = (2 * Math.PI) / numAxes;
-
+    const radiusSteps = maxRadius / 5;
+  
     // Draw grid lines
     for (let level = 0; level <= 5; level++) {
-        ctx.beginPath();
-        const radius = (maxRadius / 5) * level;
-        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-        ctx.strokeStyle = '#ccc';
-        ctx.stroke();
+        drawCircle(centerX, centerY, radiusSteps * level, '#ccc');
     }
-
+  
     // Draw axes
     labels.forEach((label, i) => {
         const angle = angleStep * i - Math.PI / 2;
         const x = centerX + maxRadius * Math.cos(angle);
         const y = centerY + maxRadius * Math.sin(angle);
-
-        ctx.beginPath();
-        ctx.moveTo(centerX, centerY);
-        ctx.lineTo(x, y);
-        ctx.strokeStyle = '#999';
-        ctx.stroke();
-
-        // Draw labels
-        ctx.fillText(label, x, y);
+  
+        drawLine(centerX, centerY, x, y, '#999');
+        drawText(label, x, y);
     });
-
+  
     // Draw data
     ctx.beginPath();
     data.forEach((value, i) => {
@@ -45,7 +36,7 @@ function drawRadarChart() {
         const radius = (value / 100) * maxRadius;
         const x = centerX + radius * Math.cos(angle);
         const y = centerY + radius * Math.sin(angle);
-
+  
         ctx.lineTo(x, y);
     });
     ctx.closePath();
@@ -53,6 +44,28 @@ function drawRadarChart() {
     ctx.fill();
     ctx.strokeStyle = 'rgba(54, 162, 235, 1)';
     ctx.stroke();
-}
-
-drawRadarChart();
+};
+  
+// Helper functions
+function drawCircle(x, y, radius, color) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    ctx.strokeStyle = color;
+    ctx.stroke();
+};
+  
+function drawLine(x1, y1, x2, y2, color) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.strokeStyle = color;
+    ctx.stroke();
+};
+  
+function drawText(text, x, y) {
+    ctx.fillText(text, x, y);
+};
+  
+document.addEventListener('DOMContentLoaded', () => {
+    drawRadarChart();
+});

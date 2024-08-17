@@ -8,13 +8,25 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/background.css">    
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
+    <style>
+        canvas {
+            background-color: aquamarine;
+            
+        }
+        #box {
+            margin: 10px auto;
+            width: fit-content;
+        }
+    </style>
     <!-- JS -->
-    <script src="JS/script.js" type="module"></script>
+    <script src="JS/graph.js" type="module" defer></script>
 
     <!-- <script src="JS/graph.js"></script> -->
 </head>
 <body>
-    <canvas id="radarCanvas" width="500" height="500"></canvas>  
+
+    <div id="box">
+        <canvas id="radarCanvas" width="500" height="500"></canvas>
+    </div>  
 </body>
 </html>
