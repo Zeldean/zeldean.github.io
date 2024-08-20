@@ -4,7 +4,7 @@
 
 This is an online CV website that showcases my professional and academic achievements, skills, and projects. The website is designed to provide a comprehensive overview of my background and experiences, making it easy for potential employers, collaborators, or peers to learn more about me.
 
-## [Website](https://zeldean.github.io)
+## [:spider_web:Site](https://zeldean.github.io)
 
 ## **Features**
 
