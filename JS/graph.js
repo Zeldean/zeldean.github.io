@@ -15,7 +15,7 @@ function drawRadarChart() {
     const radiusSteps = maxRadius / 5;
   
     // Draw grid lines
-    for (let level = 0; level <= 5; level++) {
+    for (let level = 0; level <= 8; level++) {
         drawCircle(centerX, centerY, radiusSteps * level, '#ccc');
     }
   
