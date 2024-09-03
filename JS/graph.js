@@ -5,8 +5,8 @@ const centerY = canvas.height / 2;
 const maxRadius = 200; // Define the maximum radius
 
 // Define data points
-const labels = ['Speed', 'Strength', 'Agility', 'Stamina', 'Skill'];
-const data = [100, 90, 85, 10, 95]; // Example data
+const labels = ['Speed', 'Strength', 'Agility', 'Stamina', 'Skill', 'EM-Concentration', 'EM-Capacity'];
+const data = [100, 90, 85, 10, 95, 29, 89]; // Example data
 
 // Draw the radar chart
 function drawRadarChart() {
