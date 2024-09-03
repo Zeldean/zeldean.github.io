@@ -15,7 +15,7 @@ function drawRadarChart() {
     const radiusSteps = maxRadius / 5;
   
     // Draw grid lines
-    for (let level = 0; level <= 8; level++) {
+    for (let level = 1; level <= 5; level++) {
         drawCircle(centerX, centerY, radiusSteps * level, '#ccc');
     }
   
@@ -26,7 +26,7 @@ function drawRadarChart() {
         const y = centerY + maxRadius * Math.sin(angle);
   
         drawLine(centerX, centerY, x, y, '#999');
-        drawText(label, x, y);
+        drawText(label, x, y, angleStep * i);
     });
   
     // Draw data
@@ -62,10 +62,16 @@ function drawLine(x1, y1, x2, y2, color) {
     ctx.stroke();
 };
   
-function drawText(text, x, y) {
-    ctx.fillText(text, x, y);
+function drawText(text, x, y, angle) {
+    const textOffset = 10; // Adjust as needed
+    const textX = x + textOffset * Math.cos(angle + Math.PI / 2);
+    const textY = y + textOffset * Math.sin(angle + Math.PI / 2);
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, textX, textY);
 };
   
 document.addEventListener('DOMContentLoaded', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
     drawRadarChart();
 });
