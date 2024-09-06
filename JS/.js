@@ -1,8 +1,8 @@
 /*
  * ===========================================
  * Author: Zeldean
- * Project: Code Sig
- * Date: August 8, 2024
+ * Project: convert-to-md.js
+ * Date: August 24, 2024
  * ===========================================
  *   ______      _      _                     
  *  |___  /     | |    | |                    

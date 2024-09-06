@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Night</title>
-    <link rel="stylesheet" href="./CSS/MovieNight.css"> <!-- Add a stylesheet for CSS -->
+    <link rel="stylesheet" href="./CSS/MovieNight.css" type="module"> <!-- Add a stylesheet for CSS -->
 </head>
 <body>
     <div id="container">
         <nav>
             <ul>
-                <li><a href="#" class="nav-btn" data-page="./MD/Movies.md">Home</a></li>
+                <li><a href="#" class="nav-btn" data-page="./MD/Movies.md" id="home">Home</a></li>
                 <li><a href="#" class="nav-btn">Recommendations</a></li>
                 <li><a href="#" class="nav-btn">Want to Watch</a></li>
                 <li><a href="#" class="nav-btn">Voting</a></li>
@@ -18,7 +18,8 @@
             </ul>
         </nav>
         <main>
-            <div id="home-page" class="page">
+            <div id="output_page" class="page">
+                <iframe src="" frameborder="0"></iframe>
                 <!-- JS will create content -->
             </div>            
         </main>
