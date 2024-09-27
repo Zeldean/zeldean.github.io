@@ -18,7 +18,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 8px;
@@ -28,6 +28,7 @@
 }
 #sosial_links img {
     width: 40px;
+    margin: 0 5px;
 }
 #basic_info {
     padding: 10px;
@@ -44,8 +45,12 @@
     margin: 20px auto;
     max-width: 800px; /* Or another value that fits your design */
 }
+.bottom {
+    width: 70%;
+    margin: 0 auto;
+}
 .container {
-    width: 40%;
+    /* width: 40%; */
     margin: auto;
     overflow: hidden;
 }

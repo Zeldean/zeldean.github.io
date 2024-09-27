@@ -109,6 +109,7 @@ a:hover {
 main {
     width: 74%;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 /* Skills */
@@ -149,4 +150,11 @@ main {
 }
 #programming_skills li.css::before {
     background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg')
+}
+
+
+
+iframe {
+    width: 100%;
+    
 }
