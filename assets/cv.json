@@ -1,0 +1,48 @@
+{
+	"contact": {
+		"full_name": "Dean van Zyl",
+		"email": "deanvanzyl37@gmail.com",
+		"phone": "071 375 6131",
+		"city": "Pretoria",
+		"linkedin": null,
+		"github": null
+	},
+
+	"summary": "Third-year Bachelor of Computing student at Belgium Campus, passionate about machine learning and practical software that saves people time—most recently building a C# quoting tool for a local business.",
+
+	"skills": {
+		"languages": [ "C#" ],  
+		"frameworks": [ "Windows Forms" ],
+		"tools": [ "Git", "Visual Studio" ],
+		"databases": []
+	},
+
+	"projects": [
+		{
+		"name": "Quote-Builder Automation",
+		"date": "2024-11",  
+		"tech": [ "C#", ".NET Framework", "Windows Forms" ],
+		"description": "Developed a desktop application for <Business Name> that auto-generates customer quotes from a parts database, cutting preparation time by ~60 % and eliminating manual calculation errors.",
+		"link": "private"    
+		}  
+	],
+
+	"experience": [],
+
+	"education": [
+		{
+		"institution": "Belgium Campus iTversity",
+		"degree": "BComp Computer Science",
+		"start_year": 2023,
+		"expected_grad": 2026,
+		"gpa": null
+		},
+		{
+		"institution": "Hoërskool Wonderboom",
+		"degree": "National Senior Certificate",
+		"start_year": 2018,
+		"expected_grad": 2022,
+		"gpa": null
+		}
+	]
+}
