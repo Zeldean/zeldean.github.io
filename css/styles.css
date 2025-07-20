@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav {
+    background: #77aaff;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+section {
+    padding: 20px 0;
+    background-color: #0e0a13bd;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+ul li a {
+    color: #77aaff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #77aaff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Home page */
+main {
+    width: 74%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Skills */
+#skills_block {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.skills_block {
+    min-width: fit-content;
+    padding: 10px;
+}
+#programming_skills li::before {
+    content: "";
+    display: inline-block;
+    width: 16px; /* adjust the width to match your icon size */
+    height: 16px; /* adjust the height to match your icon size */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 8px; /* add some spacing between the icon and the text */
+}
+
+#programming_skills li.python::before {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg');
+}
+#programming_skills li.my_sql::before {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg')
+}
+#programming_skills li.java_script::before {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg')
+}
+#programming_skills li.c_sharp::before {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg')
+}
+#programming_skills li.html::before {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg')
+}
+#programming_skills li.css::before {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg')
+}
+
+
+
+iframe {
+    width: 100%;
+    
+}
