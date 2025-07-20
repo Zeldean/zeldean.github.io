@@ -90,3 +90,5 @@ async function buildPdf(CV) {
 
 // bootstrap
 initButton();
+
+module.exports = { buildPdf, loadCV, initButton };
