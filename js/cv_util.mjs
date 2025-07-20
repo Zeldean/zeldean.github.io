@@ -40,6 +40,8 @@ export function bindContext(ctx){
 export function setCursor(newY){ y = newY; }
 export function getCursor(){ return y; }
 export function setPage(pg){ page = pg; }
+export function getPage(){ return page; }
+
 
 // ── geometry helpers ----------------------------------------------------
 export function newPage(){
@@ -93,7 +95,7 @@ export function addSubtitle(txt){
   y -= SUB_SIZE + LINE_GAP;
 }
 
-export function addParagraph(txt,size=BODY_SIZE){
+export function addParagraph(txt, size=BODY_SIZE){
   const maxW = A4[0] - 2*MARGIN;
   const lines = wrap(txt, maxW, fontReg, size);
   drawLines(lines, MARGIN, size, fontReg);
