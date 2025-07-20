@@ -1,33 +1,64 @@
 {
-	"contact": {
-		"full_name": "Dean van Zyl",
-		"email": "deanvanzyl37@gmail.com",
-		"phone": "071 375 6131",
+	"personal": {
+		"first_name": "Dean",
+		"middle_names": "Jacobus Andreas",
+		"surname": "van Zyl",
+		"dob": "2004-11-22",
 		"city": "Pretoria",
-		"linkedin": null,
-		"github": null
+		"country": "South Africa",
+		"home_language": "Afrikaans",
+		"other_languages": [ "English" ]
 	},
 
-	"summary": "Third-year Bachelor of Computing student at Belgium Campus, passionate about machine learning and practical software that saves people time—most recently building a C# quoting tool for a local business.",
+	"contacts": {
+		"email": "deanvanzyl37@gmail.com",
+		"phone": "+27 71 375 6131",
+		"website": "https://zeldean.me",
+		"linkedin": "https://linkedin.com/in/dean-van-zyl-971ab9253",
+		"github": "https://github.com/Zeldean"
+	},
+
+	"bio": {
+		"title": "Third-year Bachelor of Computing student",
+		"focus": "Machine Learning & Productivity Automation",
+		"summary": "Third-year Bachelor of Computing student at Belgium Campus, passionate about machine learning and practical software that saves people time—most recently building a C# quoting tool for a local business."
+	},
 
 	"skills": {
 		"languages": [ "C#" ],  
 		"frameworks": [ "Windows Forms" ],
 		"tools": [ "Git", "Visual Studio" ],
-		"databases": []
+		"databases": ["SQL Server", "SQLite", "PostgreSQL" ]
 	},
 
 	"projects": [
 		{
-		"name": "Quote-Builder Automation",
-		"date": "2024-11",  
+		"name": "Quote-Maker Automation",
+		"date": "2025-07",  
 		"tech": [ "C#", ".NET Framework", "Windows Forms" ],
-		"description": "Developed a desktop application for <Business Name> that auto-generates customer quotes from a parts database, cutting preparation time by ~60 % and eliminating manual calculation errors.",
+		"description": "Developed a desktop application for Mikado that auto-generates customer quotes from a parts database, cutting preparation time by ~60 % and eliminating manual calculation errors.",
 		"link": "private"    
-		}  
+		}
 	],
 
-	"experience": [],
+	"experience": [
+		{
+			"company": "Mikado",
+			"role": "Software Developer Intern",
+			"start_date": "2025-01",
+			"end_date": "2025-07",
+			"location": "Pretoria, South Africa",
+			"description": "Worked on a C# quoting tool that automates customer quotes, reducing preparation time by ~60 % and eliminating manual calculation errors."
+		},
+		{
+			"company": "Freelance",
+			"role": "Software Developer",
+			"start_date": "2023-01",
+			"end_date": "Present",
+			"location": "Pretoria, South Africa",
+			"description": "Developed various software solutions, including a C# quoting tool for a local business, enhancing productivity and accuracy."
+		}
+	],
 
 	"education": [
 		{
