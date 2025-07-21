@@ -30,7 +30,7 @@ const CV = JSON.parse(await fs.readFile('./assets/cv.json', 'utf8'));
 const fullName = `${CV.personal.first_name} ${CV.personal.surname}`;
 
 //────────── 2. Layout ------------------------------------------------
-var GAP2 = 25;
+var GAP2 = 15;
 
 //────────── 3. PDF setup --------------------------------------------
 const pdf   = await PDFDocument.create();
@@ -74,14 +74,21 @@ try {
 }
 ySide = addParagraph(`${CV.bio.focus}`, { ...sideBox, y: ySide, size: 12 });
 
+var miniGap = 5
 ySide -= GAP2;
+ySide -= miniGap;
 ySide = addSubtitle('Personal', { ...sideBox, y: ySide });
 ySide = addParagraph(`DOB: ${CV.personal.dob}`, { ...sideBox, y: ySide });
+ySide -= miniGap;
 ySide = addParagraph(`City: ${CV.personal.city}`, { ...sideBox, y: ySide });
+ySide -= miniGap;
 ySide = addParagraph(`Country: ${CV.personal.country}`, { ...sideBox, y: ySide });
+ySide -= miniGap;
 const languges = [CV.personal.home_language].concat(CV.personal.other_languages).toString().replace(',', ", ") || 'English';
+ySide -= miniGap;
 ySide = addParagraph(`Lang: ${languges}`, { ...sideBox, y: ySide });
 
+ySide -= miniGap;
 ySide -= GAP2;
 
 async function sideContact(iconFile, label, url) {

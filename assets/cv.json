@@ -20,8 +20,8 @@
 
 	"bio": {
 		"title": "Third-year Bachelor of Computing student",
-		"focus": "Machine Learning & Productivity Automation",
-		"summary": "Third-year Bachelor of Computing student at Belgium Campus, passionate about machine learning and practical software that saves people time—most recently building a C# quoting tool for a local business."
+		"focus": "Machine Learning · Productivity Automation · Java Game-Modding",
+		"summary": "Third-year Bachelor of Computing student at Belgium Campus who thrives on turning ideas into well-engineered code. Strong grounding in back-end OOP (C#, Java) and budding machine-learning skills, with side work in Java game-mod development. Built a C# quoting tool that cut Mikado's quote prep time by ~60%, and constantly refine personal productivity utilities (e.g. Zeltimer CLI time-logger). I'm looking for hands-on projects—anything from data science tasks to full-stack APIs—to deepen my skills and decide where to specialise. Long-term, I aim to architect and maintain my own open-source products."
 	},
 
 	"skills": {
@@ -69,7 +69,7 @@
 			"link": "private"
 		},
 		{
-			"name": "Russuax Product & Events Website",
+			"name": "Ruisseaux Product & Events Website",
 			"date": "2024-11",
 			"tech": ["HTML", "CSS", "JavaScript", "Bootstrap"],
 			"description": "Custom information site for a baby-products retailer—product catalogue with pricing, event gallery, and contact form. (Business has since closed; site offline.)",
@@ -120,7 +120,7 @@
 			"start_date": "2024-01",
 			"end_date": "Present",
 			"location": "Pretoria, South Africa",
-			"description": "Develop bespoke software for small businesses. Highlights: C# quote-automation tool for Mikado (cut prep time by ~60 %), and the Russuax baby-products website featuring product catalogue, pricing, and event gallery."
+			"description": "Develop bespoke software for small businesses. Highlights: C# quote-automation tool for Mikado (cut prep time by ~60 %), and the Ruisseaux baby-products website featuring product catalogue, pricing, and event gallery."
 		}
 	],
 

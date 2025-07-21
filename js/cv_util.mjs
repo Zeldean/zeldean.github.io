@@ -180,7 +180,7 @@ export function addParagraph(
     page.drawText(line, { x: drawX, y: yPos, size, font: useFont });
     yPos -= lh;
   });
-  return yPos - GAP;
+  return yPos;
 }
 
 
