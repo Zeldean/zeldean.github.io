@@ -37,6 +37,7 @@ const pdf   = await PDFDocument.create();
 const fontR = await pdf.embedFont(StandardFonts.Helvetica);
 const fontB = await pdf.embedFont(StandardFonts.HelveticaBold);
 let   page  = pdf.addPage(A4);
+drawSidebarRect(page);
 
 bindContext({
   pdf,
@@ -199,7 +200,12 @@ yMain -= GAP2;
 if (CV.projects?.length) {
   yMain = addSubtitle('Projects', { ...mainBox, y: yMain, centered: true });
 
+  var count = 0;
   CV.projects.forEach(p => {
+    count++;
+    if (count >= 4) {
+      return; // limit to 4 projects
+    }
     const title = `${p.name} — ${p.date}`;
     yMain = addParagraph(title, { ...mainBox, y: yMain, size: 14, centered: false, bold: true });
     yMain = addParagraph(p.description, { ...mainBox, y: yMain, size: 12 });
@@ -212,3 +218,12 @@ await fs.writeFile('./assets/dean_van_zyl_cv.pdf', await pdf.save());
 console.log('cv.pdf written ✔');
 
 
+function drawSidebarRect(p) {
+  p.drawRectangle({
+    x: 0,
+    y: 0,
+    width: SIDEBAR_W + GUTTER + (MARGIN/2),
+    height: A4[1],
+    color: rgb(0.94, 0.94, 0.94),
+  });
+}
