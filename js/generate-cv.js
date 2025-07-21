@@ -14,24 +14,18 @@ async function loadCV() {
   return res.json();
 }
 
+
 function initButton() {
   const btn = document.getElementById('downloadCv');
   if (!btn) return;
-  btn.addEventListener('click', async () => {
-    try {
-      const CV = await loadCV();
-      const bytes = await buildPdf(CV);
-      const blob = new Blob([bytes], { type: 'application/pdf' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${CV.contact.full_name.replace(/\s+/g, '_')}_CV.pdf`;
-      a.click();
-      URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error(err);
-      alert('Could not generate PDF. See console for details.');
-    }
+
+  btn.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = 'assets/dean_van_zyl_cv.pdf';          // relative to site root
+    a.download = 'Dean_van_Zyl_CV.pdf';             // filename on save
+    document.body.appendChild(a);                   // Safari workaround
+    a.click();
+    document.body.removeChild(a);
   });
 }
 
@@ -82,13 +76,14 @@ async function buildPdf(CV) {
   draw('Education', 14, 20);
   CV.education?.forEach(ed => {
     const dur = `${ed.start_year}-${ed.expected_grad ?? ''}`;
-    draw(`${ed.degree} – ${ed.institution} (${dur})`, 12, 18);
+    draw(`${ed.degree} - ${ed.institution} (${dur})`, 12, 18);
   });
 
   return pdf.save();
 }
 
-// bootstrap
-initButton();
+document.addEventListener('DOMContentLoaded', async () => {
+  initButton();
+});
 
 module.exports = { buildPdf, loadCV, initButton };

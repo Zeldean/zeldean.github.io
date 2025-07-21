@@ -21,42 +21,106 @@
 	"bio": {
 		"title": "Third-year Bachelor of Computing student",
 		"focus": "Machine Learning & Productivity Automation",
-		"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisi nulla, fringilla nec mauris at, dictum iaculis nulla. Curabitur nec nunc ac massa elementum lobortis. Cras porttitor accumsan urna, vitae volutpat sem volutpat eget. Sed sollicitudin sed neque convallis accumsan. Fusce congue felis tempor arcu lacinia vestibulum. Fusce scelerisque et orci et ultricies. Duis lectus purus, egestas vitae erat in, semper efficitur sem. Suspendisse eleifend eleifend dapibus. Phasellus faucibus sapien ut ipsum sagittis efficitur. Mauris quis bibendum risus, quis aliquet arcu. Nulla euismod nibh non facilisis condimentum. Suspendisse vel lobortis mi, et lacinia lectus. Curabitur auctor sit amet felis vitae tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ultrices lacus eget dignissim hendrerit. Fusce cursus, tellus eget molestie commodo, est dolor scelerisque augue, sed vehicula massa arcu sit amet felis. Vestibulum sed malesuada risus. Nam sit amet lacus in ex maximus feugiat eu eu sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit tortor eget metus dignissim, et pretium ligula malesuada. Nam dignissim quis felis ut dignissim. Ut dui ante, eleifend non imperdiet nec, congue in massa. Suspendisse scelerisque egestas faucibus. Nullam iaculis molestie eros quis consectetur. Duis semper erat nec velit tincidunt, in volutpat odio molestie. Nam sagittis tempor felis, eget lobortis enim congue vel. Quisque id cursus justo. Aliquam vel metus est. Sed a pellentesque dolor, quis feugiat est. Sed ac fermentum ex. Praesent consequat a nibh quis dictum. Sed tempor purus sit amet justo auctor, in commodo lectus malesuada. Vestibulum eget mi quis lectus porta consectetur ut in velit. Maecenas vitae lacinia libero. Sed id consequat neque. Donec sed pharetra massa. In hendrerit enim risus, non varius risus condimentum id. Suspendisse potenti. Nulla bibendum volutpat mauris, vel fermentum urna lacinia eu. Cras et arcu nec quam semper ullamcorper. Donec elementum felis finibus nulla hendrerit, non placerat diam consequat. Phasellus dui magna, lacinia eget nibh nec, congue venenatis quam. Donec et elit non nisl varius tincidunt ut sit amet enim. Nulla vestibulum non mauris at sagittis."
+		"summary": "Third-year Bachelor of Computing student at Belgium Campus, passionate about machine learning and practical software that saves people time—most recently building a C# quoting tool for a local business."
 	},
 
 	"skills": {
-		"languages": [ "C#" ],  
-		"frameworks": [ "Windows Forms" ],
-		"tools": [ "Git", "Visual Studio" ],
-		"databases": ["SQL Server", "SQLite", "PostgreSQL" ]
+		"languages": [
+			"C#",
+			"Java 17",
+			"JavaScript (ES6)",
+			"SQL",
+			"Python"
+		],
+		"frameworks": [
+			"Windows Forms",
+			"Java Swing",
+			"JSP / Servlets",
+			"Express.js",
+			"EJS",
+			"Bootstrap"
+		],
+		"databases": [
+			"PostgreSQL",
+			"SQL Server",
+			"SQLite",
+			"Apache Derby (JavaDB)",
+			"MongoDB (replica & sharding)"
+		],
+		"tools": [
+			"Git & GitHub",
+			"Visual Studio",
+			"NetBeans",
+			"VS Code",
+			"Apache Tomcat",
+			"Node.js + npm",
+			"Nodemon",
+			"Mongoose",
+			"Postman"
+		]
 	},
 
 	"projects": [
 		{
-		"name": "Quote-Maker Automation",
-		"date": "2025-07",  
-		"tech": [ "C#", ".NET Framework", "Windows Forms" ],
-		"description": "Developed a desktop application for Mikado that auto-generates customer quotes from a parts database, cutting preparation time by ~60 % and eliminating manual calculation errors.",
-		"link": "private"    
+			"name": "Quote-Maker Automation (Mikado)",
+			"date": "2025-07",
+			"tech": ["C#", ".NET Framework", "Windows Forms", "SQL Server"],
+			"description": "Desktop tool that auto-generates customer quotes from a parts database, cutting prep time by ~60 % and eliminating manual calculation errors.",
+			"link": "private"
+		},
+		{
+			"name": "Russuax Product & Events Website",
+			"date": "2024-11",
+			"tech": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+			"description": "Custom information site for a baby-products retailer—product catalogue with pricing, event gallery, and contact form. (Business has since closed; site offline.)",
+			"link": "offline"
+		},
+		{
+			"name": "BC Student Wellness System - Milestone 1 (Web)",
+			"date": "2025-07",
+			"tech": ["Java 17", "JSP/Servlets", "PostgreSQL", "Apache Tomcat", "MVC"],
+			"description": "Login/registration web app demonstrating session management, password hashing, and input validation for student wellness services.",
+			"link": "https://github.com/ReinardPieters/BCStudentWellnessSystem"
+		},
+		{
+			"name": "BC Student Wellness System - Milestone 2 (Desktop)",
+			"date": "2025-07",
+			"tech": ["Java 17", "Swing", "Apache Derby", "MVC"],
+			"description": "Swing GUI for booking appointments, managing counsellors, and collecting feedback; complete CRUD with Derby DB.",
+			"link": "https://github.com/ReinardPieters/BCWellnessMilestone2"
+		},
+		{
+			"name": "MongoDB Sharded Cluster Simulation",
+			"date": "2025-05", 
+			"tech": [
+				"MongoDB Community Edition (replica sets + sharding)",
+				"Node.js", "Express", "Mongoose",
+				"Bash/Batch scripting"
+			],
+			"description": "University DBD381 project that simulates a fully distributed NoSQL system on a single machine. Scripts spin up config servers, three regional shard replica sets (EU, Asia, US), and a mongos router. A sample Express + Mongoose app routes reads/writes by region and demonstrates sharded collection design with compound indexes.",
+			"link": "https://github.com/Zeldean/DBD-Project"
+		},
+		{
+			"name": "Community Portal Web Application (WPR381)",
+			"date": "2025- 10",
+			"tech": [
+				"Node.js 18", "Express 4", "EJS",
+				"CSS3 (dark theme)", "JSON file storage"
+			],
+			"description": "Team project for WPR381: a five-page community portal (Home, About, Events, Contact, Thank-You) with modular Express routing, dynamic EJS views, contact form POST -> JSON storage, and responsive dark-theme styling. Includes scripts, event/contact managers, and Nodemon dev workflow.",
+			"link": "https://github.com/Zeldean/WPR381-Assignment"
 		}
+
 	],
 
 	"experience": [
 		{
-			"company": "Mikado",
-			"role": "Software Developer Intern",
-			"start_date": "2025-01",
-			"end_date": "2025-07",
-			"location": "Pretoria, South Africa",
-			"description": "Worked on a C# quoting tool that automates customer quotes, reducing preparation time by ~60 % and eliminating manual calculation errors."
-		},
-		{
 			"company": "Freelance",
 			"role": "Software Developer",
-			"start_date": "2023-01",
+			"start_date": "2024-01",
 			"end_date": "Present",
 			"location": "Pretoria, South Africa",
-			"description": "Developed various software solutions, including a C# quoting tool for a local business, enhancing productivity and accuracy."
+			"description": "Develop bespoke software for small businesses. Highlights: C# quote-automation tool for Mikado (cut prep time by ~60 %), and the Russuax baby-products website featuring product catalogue, pricing, and event gallery."
 		}
 	],
 
