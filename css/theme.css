@@ -1,0 +1,170 @@
+/* ================================
+   theme.css — Global Design Tokens
+   ================================ */
+@font-face {
+    font-family: 'Hermit Nerd Font';
+    src: url(../assets/fonts/HurmitNerdFontMono-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* ── Base Theme Variables ───────────────────────── */
+:root {
+  /* ── Brand Colors ── */
+  --primary-color:     #8e44ad;  /* Royal purple */
+  --secondary-color:   #9b59b6;  /* Soft lavender */
+  --accent-color:      #ffcc00;
+
+  /* ── Backgrounds ── */
+  --bg-base:           #0a0312;       /* Deep eggplant */
+  --bg-alt:            #1e0a2a;       /* Section panels */
+  --bg-surface:        #2a0e3d;       /* Cards/panels */
+  --bg-hover:          #3c1d57;       /* Slightly lighter hover */
+
+  --bg-glass-dark:     rgba(46, 12, 63, 0.5); /* Semi-transparent purple for navs */
+  --bg-glass-darker:   rgba(46, 12, 63, 0.623);
+  --bg-glass-blur:     rgba(46, 12, 63, 0.35); /* For optional blur layers */
+
+  /* ── Text Colors ── */
+  --text-light:        #f9f9f9;
+  --text-dark:         #1c1c1c;
+  --text-muted:        #bbbbbb;
+
+  /* ── Borders & Dividers ── */
+  --border-color:      #5e2b7a;
+  --divider-color:     #391c4d;
+
+  /* ── Link Styling ── */
+  --link-color:        var(--primary-color);
+  --link-hover:        var(--secondary-color);
+
+  /* ── Font Settings ── */
+  --font-base: 'Hermit Nerd Font', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base:    16px;
+  --font-size-lg:      1.25rem;
+  --font-size-sm:      0.875rem;
+  --line-height-base:  1.6;
+}
+
+/* ── Global Reset ───────────────────────── */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* ── Global Font Defaults ───────────────────────── */
+html {
+  	font-size: var(--font-size-base);
+	  scroll-behavior: smooth;
+}
+
+
+body {
+	font-family: var(--font-base);
+	color: var(--text-light);
+	background-color: var(--bg-base);
+	background-image: url('../assets/background.png');
+	;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	line-height: var(--line-height-base);
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-color: rgba(14, 14, 14, 0.596); /* same as --bg-base */
+  z-index: -1;
+}
+
+
+
+/* ── Headings ───────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-light);
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* ── Links ──────────────────────────────────────── */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* ── Utility Colors (Optional Usage) ────────────── */
+.text-primary   { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.text-accent    { color: var(--accent-color) !important; }
+.text-muted     { color: var(--text-muted) !important; }
+
+.bg-base        { background-color: var(--bg-base) !important; }
+.bg-alt         { background-color: var(--bg-alt) !important; }
+.bg-surface     { background-color: var(--bg-surface) !important; }
+
+.border-default { border: 1px solid var(--border-color); }
+.divider        { border-bottom: 1px solid var(--divider-color); }
+
+/* ── Buttons ─────────────────────────────────────── */
+button,
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-family: var(--font-base);
+  font-weight: 500;
+  color: var(--text-light);
+  background-color: var(--bg-surface);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-base);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-base);
+}
+
+/* Optional size modifiers */
+.btn-small {
+  padding: 0.5em 1em;
+  font-size: var(--font-size-sm);
+}
+
+.btn-large {
+  padding: 1em 2em;
+  font-size: var(--font-size-lg);
+}
+

@@ -1,168 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Dean van Zyl's CV website">
     <meta name="keywords" content="Dean, Dean van Zyl, Software Engineering Student">
     <meta name="author" content="Dean van Zyl">
-    <title>Dean van Zyl - Software Engineering Student</title>
-    
-    <!-- css -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/background.css">
-    <link rel="stylesheet" href="css/about-me.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-        
-    <!-- js -->
-    <script src="js/script.js" type="module"></script>
-    <script src="js/page_load.js"></script>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Dean van Zyl</h1>
-            <p>Software Engineering Student</p>
-        </div>
-    </header>
+    <title>Dean van Zyl — Software Engineering Student</title>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#extracurricular">Extracurricular</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout-header.css">
+    <link rel="stylesheet" href="css/layout-nav.css">
+    <link rel="stylesheet" href="css/layout-body.css">
+    <link rel="stylesheet" href="css/layout-footer.css">
+</head>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        // document.body.classList.add("splash-animate");
+        // document.body.classList.add("text-fade-animate");
+        setTimeout(() => {
+            document.getElementById("splash-overlay")?.remove();
+        }, 3000);
+
+        let nav = document.getElementById('site-nav');
+        // let sideBtn
+        let lastScrollY = window.scrollY;
+        let isAsideOut = false;
+
+        // Scroll-based bubble hide
+        window.addEventListener("scroll", () => {
+            const bubble = document.getElementById("splash-bubble");
+            if (!bubble) return;
+            if (window.scrollY > 10) {
+                bubble.classList.add("bubble-hide");
+            } else {
+                bubble.classList.remove("bubble-hide");
+            }
+
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > 40 && !isAsideOut) {
+                nav.classList.remove('aside-in');
+                nav.classList.add('aside-out');
+                isAsideOut = true;
+            } else if (currentScroll <= 40 && isAsideOut) {
+                nav.classList.remove('aside-out');
+                nav.classList.add('aside-in');
+                isAsideOut = false;
+            }
+
+            if (window.scrollY > 200) {
+                backToTopBtn.classList.add("visible");
+                } else {
+                backToTopBtn.classList.remove("visible");
+            }
+
+            lastScrollY = currentScroll;
+        });
+
+        document.getElementById("nav-toggle").addEventListener("click", () => {
+            let navBox = document.getElementById("vertical-nav-container");
+            if (nav.classList.contains("aside-out")) {
+
+                nav.classList.remove("aside-out");
+                nav.classList.add("aside-in");
+                navBox.classList.add("blur");
+                isAsideOut = false;
+            } else {
+
+                nav.classList.remove("aside-in");
+                nav.classList.add("aside-out");
+                navBox.classList.remove("blur");
+                isAsideOut = true;
+            }
+        });
+
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+
+<body>
+    <div id="splash-overlay"></div>
+    <header id="splash-bubble">
+        <h1>Dean van Zyl</h1>
+        <p>Software Engineering Student</p>
+    </header>    
+
+    <div id="vertical-nav-container">
+        <nav id="site-nav">
+            <ul class="nav-list">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#extracurricular">Extracurricular</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cv">My CV</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
+    <div id="nav-toggle" class="nav-toggle">
+        <img src="assets/icons/icon_menu.png" alt="Menu Icon">
+    </div>
+    <div id="nav-spacer"></div>
 
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="top">
-                <div class="image" id="profile_image">
-                    <img src="./assets/profile.jpg" alt="Head and shoulders photo of Dean">
-                </div>
-                <div id="basic_info">
-                    <div id="basic_info">
-                        <p class="item">Full Name: <span class="info">Dean Jacobus Andreas van Zyl</span></p><br>
-                        <p class="item">Nationality: <span class="info">South African</span></p><br>
-                        <p class="item">Languages: <span class="info">English, Afrikaans</span></p><br>
-                        <p class="item">Current Location: <span class="info">Pretoria, South Africa</span></p><br>
-                        <p class="item">Timezone: <span class="info">SAST (GMT+2)</span></p><br>
-                        <p class="item">Age: <span class="info" id="age_display">0</span></p><br>
-                        <p class="item">Gender: <span class="info">Male</span></p>
-                    </div>
-        
-                </div>
+        <!-- ABOUT ME -->
+        <section id="about" class="section section--about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-top d-flex flex-center">
+            <div class="about-photo">
+                <img src="./assets/profile.jpg" alt="Photo of Dean van Zyl in formal attire">
             </div>
-        
-            <div class="bottom">
-                <p id="bio">
-                    As a second-year student at Belgium Campus ITversity, I am pursuing a Bachelor of Computing degree specialising in Software Engineering. My academic pursuits are driven by a profound interest in technology, particularly in the field of Artificial Intelligence. My career goals revolve around achieving proficiency as an AI Engineer and utilizing my expertise to contribute to cutting-edge technological advancements. I am wholeheartedly enthusiastic about taking on challenges and fully committed to putting forth dedicated efforts to turn my ambitions into reality.
-                </p>
-                <!-- <div id="previous_bios">
-                    <button id="dropdown_btn">View Previous Bio's</button>
-                    <div id="dropdown_content">
-                        <p>Bio from 2023: [Short Description]</p>
-                        <p>Bio from 2022: [Short Description]</p>
-                    </div>
-                </div> -->
-                <div id="sosial_links">
-                    <a href="https://github.com/Zeldean"><img src="assets/icons/icon_github.png" alt="gitHub Icon"></a>
-                    <a href="https://linkedin.com/in/dean-van-zyl-971ab9253"><img src="assets/icons/icon_linkedin.png" alt="linkedin Icon"></a>
-                    <a href="https://reddit.com/user/Familiar_Bee9566"><img src="assets/icons/icon_reddit.png" alt="linkedin Icon"></a>
-                </div>
+            <ul class="about-details">
+                <li><strong>Full Name:</strong> Dean Jacobus Andreas van Zyl</li>
+                <li><strong>Nationality:</strong> South African</li>
+                <li><strong>Languages:</strong> English, Afrikaans</li>
+                <li><strong>Location:</strong> Pretoria, South Africa</li>
+                <li><strong>Timezone:</strong> SAST (GMT+2)</li>
+                <li><strong>Age:</strong> <span id="age_display"></span></li>
+                <li><strong>Gender:</strong> Male</li>
+            </ul>
             </div>
+            <div class="about-bottom">
+            <p class="about-bio">
+                As a second‑year student at Belgium Campus ITversity, I am pursuing a
+                Bachelor of Computing degree specialising in Software Engineering.
+                My academic pursuits are driven by a profound interest in technology,
+                particularly Artificial Intelligence. I’m enthusiastic about
+                challenges and committed to turning my ambitions into reality.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/Zeldean" target="_blank" aria-label="GitHub profile">
+                <img src="assets/icons/icon_github.png" alt="GitHub logo">
+                </a>
+                <a href="https://linkedin.com/in/dean-van-zyl-971ab9253" target="_blank" aria-label="LinkedIn profile">
+                <img src="assets/icons/icon_linkedin.png" alt="LinkedIn logo">
+                </a>
+                <a href="https://reddit.com/user/Familiar_Bee9566" target="_blank" aria-label="Reddit profile">
+                <img src="assets/icons/icon_reddit.png" alt="Reddit logo">
+                </a>
+            </div>
+            </div>
+        </div>
         </section>
-        <section id="skills">
-            <h2 id="skills_heading">Skills</h2>
-            <div id="skills_block">
-                <div class="skills_block" id="programming_skills">
-                    <h3>Programming</h3>
-                    <ul>
-                        <li class="my_sql">My SQL</li>
-                        <li class="java_script">Java Script</li>
-                        <li class="html">HTML</li>
-                        <li class="css">css</li>
-                        <li class="c_sharp">C#</li>
-                        <li class="python">Python</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Personal</h3>
-                    <ul class="skills_block">
-                        <li>Computer Skills</li>
-                        <li>Critical Thinking</li>
-                        <li>Time Management</li>
-                        <li>Positive Attitude</li>
-                        <li>Goal Oriented</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="education">
-            <div class="container">
-                <h2>Education</h2>
-                <p>Bachelor of Computing (Software Engineering Elective) - Belgium Campus ITversity</p>
-                <p>Hoërskool Wonderboom - Matric 2022</p>
-                <p><strong>Awards & Honors:</strong></p>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section section--skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+            <div class="skills-category">
+                <h3>Programming</h3>
                 <ul>
-                    <li>Subject Award - Information Technology (2020 and 2021)</li>
-                    <li>Subject Award - Engineering Graphics And Design (2020)</li>
+                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>C#</li>
+                <li>Python</li>
                 </ul>
             </div>
-        </section>
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <p>Here are a few of my notable projects:</p>
-                <ul id="project-list">
-                    <li><a href="https://github.com/Zeldean/WPR281-Project" target="_blank">WPR281 Assignment (Belgium-Campus ITversity Website)</a></li>
-                    <li><a href="https://github.com/Zeldean/Vhalus-Codex" target="_blank">Vhalus Codex</a></li>
-                    <li><a href="https://github.com/Zeldean" target="_blank"></a></li>
-                </ul>
-            </div>
-        </section>
-        <section id="extracurricular">
-            <div class="container">
-                <h2>Extracurricular Activities</h2>
+            <div class="skills-category">
+                <h3>Personal</h3>
                 <ul>
-                    <li>Orators</li>
-                    <li>First Aid Team (school)</li>
-                    <li>Marketing Team (school)</li>
-                    <li>Field Target Shooting - Represented Hoërskool Wonderboom at the International Field Target Shooting Competition in England - 2019</li>
+                <li>Critical Thinking</li>
+                <li>Time Management</li>
+                <li>Positive Attitude</li>
+                <li>Goal-Oriented</li>
                 </ul>
             </div>
-        </section>
-        <section id="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Phone: 071 375 6131</p>
-                <p>Email: <a href="mailto:deanvanzyl37@gmail.com">deanvanzyl37@gmail.com</a></p>                
-                
-          
-                <p>Connect with me on <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank">LinkedIn</a></p>
             </div>
+        </div>
         </section>
-        <section>
-            <div class="container">
-                <h2>Download CV</h2>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section section--education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <p><strong>Bachelor of Computing</strong> — Software Engineering, Belgium Campus ITversity</p>
+            <p><strong>Hoërskool Wonderboom</strong> — Matric 2022</p>
+            <h3>Awards & Honors</h3>
+            <ul>
+            <li>Information Technology Subject Award (2020–2021)</li>
+            <li>Engineering Graphics & Design Subject Award (2020)</li>
+            </ul>
+        </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section section--projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <ul class="project-list">
+            <li><a href="https://github.com/Zeldean/WPR281-Project" target="_blank">WPR281 Assignment (BCIT)</a></li>
+            <li><a href="https://github.com/Zeldean/Vhalus-Codex" target="_blank">Vhalus Codex</a></li>
+            <li><a href="https://github.com/Zeldean" target="_blank">More on GitHub</a></li>
+            </ul>
+        </div>
+        </section>
+
+        <!-- EXTRACURRICULAR -->
+        <section id="extracurricular" class="section section--extracurricular">
+        <div class="container">
+            <h2 class="section-title">Extracurricular Activities</h2>
+            <ul>
+            <li>Orators Club</li>
+            <li>First Aid Team (Hoërskool Wonderboom)</li>
+            <li>Marketing Team (Hoërskool Wonderboom)</li>
+            <li>Field‑Target Shooting — International Competition, England (2019)</li>
+            </ul>
+        </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section--contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p><strong>Phone:</strong> +27 71 375 6131</p>
+            <p><strong>Email:</strong> <a href="mailto:deanvanzyl37@gmail.com">deanvanzyl37@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dean-van-zyl-971ab9253" target="_blank">linkedin.com/in/dean-van-zyl-971ab9253</a></p>
+        </div>
+        </section>
+
+        <!-- DOWNLOAD CV -->
+        <section id="cv" class="section section--cv">
+            <div class="container text-center">
+                <h2 class="section-title">My CV</h2>
                 <button id="downloadCv">Download My CV (PDF)</button>
             </div>
         </section>
+
+        <button id="backToTop" class="btn btn-outline btn-small" aria-label="Back to top">
+            ↑ Top
+        </button>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 Dean van Zyl. All Rights Reserved.</p>
-        </div>
-    </footer>  
-    
-    <script src="js/pdf-lib.min.js"></script>
-    <script type="module" src="js/generate-cv.js"></script>
+    <footer class="site-footer">
+        <p>© 2024 Dean van Zyl. All Rights Reserved.</p>
+    </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js" type="module"></script>
+  <script src="js/page_load.js"></script>
+  <script>
+    document.getElementById('downloadCv').addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.href = 'assets/dean_van_zyl_cv.pdf';
+      a.download = 'Dean_van_Zyl_CV.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  </script>
 </body>
 </html>

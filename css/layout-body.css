@@ -1,0 +1,139 @@
+/* ================================
+   layout-body.css
+   ================================ */
+
+main {
+  padding: 2rem 1rem;
+}
+
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--bg-alt);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+/* ABOUT SECTION */
+.about-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo img {
+  max-width: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+}
+
+.about-details {
+  list-style: none;
+  padding: 0;
+  color: var(--text-muted);
+}
+
+.about-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* ABOUT BOTTOM BIO */
+.about-bottom {
+  margin-top: 2rem;
+}
+.about-bio {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* SOCIAL ICONS */
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* SKILLS SECTION */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skills-category {
+  flex: 1 1 220px;
+  background-color: var(--bg-surface);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.skills-category h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+}
+
+.skills-category ul {
+  list-style: none;
+  padding-left: 0;
+  color: var(--text-muted);
+}
+
+.skills-category li {
+  margin-bottom: 0.4rem;
+}
+
+/* PROJECTS */
+.project-list {
+  padding-left: 1rem;
+  color: var(--text-light);
+}
+.project-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* CV DOWNLOAD */
+.section--cv button {
+  margin-top: 1rem;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#backToTop:hover {
+  transform: translateY(-4px);
+}

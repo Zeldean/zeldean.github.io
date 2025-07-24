@@ -1,0 +1,12 @@
+/* ================================
+   layout-footer.css
+   ================================ */
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--divider-color);
+}

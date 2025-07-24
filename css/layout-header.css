@@ -1,0 +1,65 @@
+/* ================================
+   splash.css — layout + movement only
+   ================================ */
+
+/* ── Splash Bubble Layout ───────────────── */
+#splash-bubble {
+	background-color: var(--bg-glass-dark);
+	border-radius: 3rem;
+	padding: 1.5rem;
+	text-align: center;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+
+	animation: bubbleUp 1.8s ease-in-out forwards;
+}
+#splash-bubble h1 {
+  	margin: 0;
+}
+#splash-bubble p {
+  	margin: 0;
+}
+
+/* ── Overlay Layout ─────────────────────── */
+#splash-overlay {
+	position: fixed;
+	background-color: black;
+	inset: 0;
+	z-index: 999;
+	animation: overlayFadeOut 3s ease-out forwards;
+}
+
+/* ── Keyframes: Bubble Movement ─────────── */
+@keyframes bubbleUp {
+	0% {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	60% {
+		border-radius: 2.8rem; /* structural morphing */
+	}
+	100% {
+		top: 0;
+		transform: translate(-50%, 0);
+		border-radius: 0 0 3rem 3rem;
+	}
+}
+
+/* ── Keyframes: Overlay Fade (movement-only part) ─ */
+@keyframes overlayFadeOut {
+    0% { opacity: 1; }
+    60% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+/* ── Scroll-triggered bubble hide ─────────────── */
+#splash-bubble.bubble-hide {
+	transform: translate(-50%, -120%);
+	opacity: 0;
+	transition: transform 0.3s ease, opacity 0.4s ease;
+	pointer-events: none;
+}
