@@ -7,7 +7,22 @@ body {
     color: white;
 }
 
+button {
+    background: #1f2937;
+    color: #e5e7eb;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    width: fit-content;
+    align-self: center;
+}
 
+button:hover {
+    background:#374151
+}
 
 header {
     background: #333;

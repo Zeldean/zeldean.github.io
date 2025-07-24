@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zeldean | Home</title>
+  <link rel="icon" href="assets/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- If you prefer, move these rules to css/styles.css -->
+  <style>
+    body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#111;color:#e5e7eb;font-family:system-ui,sans-serif;text-align:center}
+    h1{font-size:2rem;margin:0}
+    button{background:#1f2937;color:#e5e7eb;border:none;padding:0.75rem 1.5rem;border-radius:0.5rem;font-size:1rem;cursor:pointer;margin-top:2rem}
+    button:hover{background:#374151}
+  </style>
+  <link rel="stylesheet" href="css/styles.css"><!-- optional -->
+</head>
+<body>
+  <main>
+    <h1>Welcome to Zeldean's 🕸️ Site</h1>
+    <button id="downloadCv">Download My CV (PDF)</button>
+  </main>
+
+  <!-- Vendor library then module code -->
+  <script src="js/pdf-lib.min.js"></script>
+  <script type="module" src="js/generate-cv.js"></script>
+</body>
+</html>
