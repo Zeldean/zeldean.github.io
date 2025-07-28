@@ -10,8 +10,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     populateEducation(data.education);
     populateProjects(data.projects);
     populateExperience(data.experience);
-    populateExtracurricular(data.extracurricular);
+    // populateExtracurricular(data.extracurricular);
     populateContact(data.contacts);
+    
   } catch (err) {
     console.error('Failed to load data:', err);
   }
@@ -64,7 +65,7 @@ function populateSkills(skills) {
 function populateEducation(eduArr) {
   const container = document.getElementById('education-list');
   container.innerHTML = eduArr.map(e => `
-    <p><strong>${e.degree}</strong> — ${e.institution} (${e.start_year}–${e.expected_grad})</p>
+    <p><strong>${e.degree}</strong> — ${e.institution} (${e.start_year}-${e.expected_grad})</p>
     ${e.awards ? `<ul>${e.awards.map(a => `<li>${a}</li>`).join('')}</ul>` : ''}
   `).join('');
 }
@@ -85,7 +86,7 @@ function populateExperience(exp) {
   const container = document.getElementById('experience-list');
   container.innerHTML = exp.map(e => `
     <div class="experience-item">
-      <h3>${e.role} @ ${e.company} (${e.start_date}–${e.end_date})</h3>
+      <h3>${e.role} @ ${e.company} (${e.start_date}-${e.end_date})</h3>
       <p>${e.location}</p>
       <p>${e.description}</p>
     </div>
