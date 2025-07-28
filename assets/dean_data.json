@@ -24,6 +24,15 @@
 			"github": "https://github.com/Zeldean",
 			"reddit": "https://reddit.com/user/Familiar_Bee9566",
 			"website": "https://zeldean.me"
+		},
+		"sosialsNew": {
+			"linkedin": {
+				"url": "https://linkedin.com/in/dean-van-zyl-971ab9253",
+				"icon": "icons/icon_linkedin.png"
+			},
+			"github": "https://github.com/Zeldean",
+			"reddit": "https://reddit.com/user/Familiar_Bee9566",
+			"website": "https://zeldean.me"
 		}
 	},
 	"skills": {
@@ -34,64 +43,83 @@
 	},
 	"education": [
 		{
-		"institution": "Belgium Campus iTversity",
-		"degree": "BComp Computer Science — Software Engineering",
-		"start_year": 2023,
-		"expected_grad": 2026
+			"institution": "Belgium Campus iTversity",
+			"logo": "icons/logo_belgiumcampus.png",
+			"degree": "BComp Computer Science — Software Engineering",
+			"start_year": 2023,
+			"expected_grad": 2026,
+			"awards": [
+				"Top 3 in Major 2023",
+				"Dean's List 2023-2024"
+			],
+			"performance": {
+				"subjects_exempted": 0,
+				"subjects_passed": 32,
+				"distinctions": 32,
+				"subjects_failed": 0,
+				"outstanding_subjects": 0,
+				"weighted_average": "83.4%",
+				"credits_achieved": 277
+			}
 		},
 		{
-		"institution": "Hoërskool Wonderboom",
-		"degree": "National Senior Certificate (Matric)",
-		"start_year": 2018,
-		"expected_grad": 2022,
-		"awards": ["IT Subject Award 2020-2021", "EGD Subject Award 2020"]
+			"institution": "Hoërskool Wonderboom",
+			"logo": "icons/logo_wonderboom.png",
+			"degree": "National Senior Certificate (Matric)",
+			"start_year": 2018,
+			"expected_grad": 2022,
+			"awards": [
+				"IT Subject Award 2020-2021",
+				"EGD Subject Award 2020"
+			]
 		}
 	],
+
 	"projects": [
 		{
-		"name": "Quote-Maker Automation (Mikado)",
-		"date": "2025-07",
-		"tech": ["C#", ".NET Framework", "Windows Forms", "SQL Server"],
-		"description": "Desktop tool that auto-generates customer quotes from a parts database, cutting prep time by ~60 % and eliminating manual calculation errors.",
-		"link": "private"
+			"name": "Quote-Maker Automation (Mikado)",
+			"date": "2025-07",
+			"tech": ["C#", ".NET Framework", "Windows Forms", "SQL Server"],
+			"description": "Desktop tool that auto-generates customer quotes from a parts database, cutting prep time by ~60 % and eliminating manual calculation errors.",
+			"link": "private"
 		},
 		{
-		"name": "BC Student Wellness System - Milestone 1 (Web)",
-		"date": "2025-07",
-		"tech": ["Java 17", "JSP/Servlets", "PostgreSQL", "Apache Tomcat", "MVC"],
-		"description": "Login/registration web app demonstrating session management, password hashing, and input validation.",
-		"link": "https://github.com/ReinardPieters/BCStudentWellnessSystem"
+			"name": "BC Student Wellness System - Milestone 1 (Web)",
+			"date": "2025-07",
+			"tech": ["Java 17", "JSP/Servlets", "PostgreSQL", "Apache Tomcat", "MVC"],
+			"description": "Login/registration web app demonstrating session management, password hashing, and input validation.",
+			"link": "https://github.com/ReinardPieters/BCStudentWellnessSystem"
 		},
 		{
-		"name": "BC Student Wellness System - Milestone 2 (Desktop)",
-		"date": "2025-07",
-		"tech": ["Java 17", "Swing", "Apache Derby", "MVC"],
-		"description": "Swing GUI for booking appointments, managing counsellors, and collecting feedback; full CRUD operations.",
-		"link": "https://github.com/ReinardPieters/BCWellnessMilestone2"
+			"name": "BC Student Wellness System - Milestone 2 (Desktop)",
+			"date": "2025-07",
+			"tech": ["Java 17", "Swing", "Apache Derby", "MVC"],
+			"description": "Swing GUI for booking appointments, managing counsellors, and collecting feedback; full CRUD operations.",
+			"link": "https://github.com/ReinardPieters/BCWellnessMilestone2"
 		},
 		{
-		"name": "MongoDB Sharded Cluster Simulation",
-		"date": "2025-05",
-		"tech": ["MongoDB (replica sets + sharding)", "Node.js", "Express", "Mongoose", "Bash/Batch scripting"],
-		"description": "University DBD381 project simulating distributed NoSQL system with shards across regions.",
-		"link": "https://github.com/Zeldean/DBD-Project"
+			"name": "MongoDB Sharded Cluster Simulation",
+			"date": "2025-05",
+			"tech": ["MongoDB (replica sets + sharding)", "Node.js", "Express", "Mongoose", "Bash/Batch scripting"],
+			"description": "University DBD381 project simulating distributed NoSQL system with shards across regions.",
+			"link": "https://github.com/Zeldean/DBD-Project"
 		},
 		{
-		"name": "Community Portal Web Application (WPR381)",
-		"date": "2025-10",
-		"tech": ["Node.js 18", "Express 4", "EJS", "CSS3 (dark theme)", "JSON storage"],
-		"description": "Team project: five-page portal with modular routing, contact form -> JSON storage, responsive dark-theme.",
-		"link": "https://github.com/Zeldean/WPR381-Assignment"
+			"name": "Community Portal Web Application (WPR381)",
+			"date": "2025-10",
+			"tech": ["Node.js 18", "Express 4", "EJS", "CSS3 (dark theme)", "JSON storage"],
+			"description": "Team project: five-page portal with modular routing, contact form -> JSON storage, responsive dark-theme.",
+			"link": "https://github.com/Zeldean/WPR381-Assignment"
 		}
 	],
 	"experience": [
 		{
-		"company": "Freelance",
-		"role": "Software Developer",
-		"start_date": "2024-01",
-		"end_date": "Present",
-		"location": "Pretoria, South Africa",
-		"description": "Develop bespoke software for small businesses. Highlights include the Mikado quote automation tool and the Ruisseaux baby-product site."
+			"company": "Freelance",
+			"role": "Software Developer",
+			"start_date": "2024-01",
+			"end_date": "Present",
+			"location": "Pretoria, South Africa",
+			"description": "Develop bespoke software for small businesses. Highlights include the Mikado quote automation tool and the Ruisseaux baby-product site."
 		}
 	],
 	"extracurricular": [
