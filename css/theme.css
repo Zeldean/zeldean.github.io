@@ -58,8 +58,8 @@
 
 /* ── Global Font Defaults ───────────────────────── */
 html {
-  	font-size: var(--font-size-base);
-	  scroll-behavior: smooth;
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
 }
 
 
@@ -87,8 +87,8 @@ body::before {
 
 /* ── Headings ───────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    color: var(--text-light);
+  font-weight: 600;
+  color: var(--text-light);
 }
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
@@ -96,13 +96,13 @@ h3 { font-size: 1.5rem; }
 
 /* ── Links ──────────────────────────────────────── */
 a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 a:hover,
 a:focus {
-    color: var(--link-hover);
-    text-decoration: underline;
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* ── Utility Colors (Optional Usage) ────────────── */
@@ -119,8 +119,7 @@ a:focus {
 .divider        { border-bottom: 1px solid var(--divider-color); }
 
 /* ── Buttons ─────────────────────────────────────── */
-button,
-.btn {
+button, .btn {
   display: inline-block;
   padding: 0.75em 1.5em;
   font-size: 1rem;

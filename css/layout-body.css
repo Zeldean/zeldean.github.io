@@ -1,18 +1,23 @@
 /* ================================
-   layout-body.css
+   layout-body.css (Updated Layout Only)
    ================================ */
 
 main {
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
 }
 
+/* Shared section styles */
 .section {
+  width: 100%;
   max-width: 900px;
-  margin: 3rem auto;
   padding: 2rem;
-  background-color: var(--bg-alt);
   border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  background-color: var(--bg-alt);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
@@ -24,24 +29,32 @@ main {
   color: var(--text-light);
 }
 
-/* ABOUT SECTION */
+/* === ABOUT SECTION === */
 .about-top {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
   align-items: center;
+}
+
+.about-photo {
+  /* flex: 0 0 160px; */
+  display: flex;
   justify-content: center;
 }
 
 .about-photo img {
   max-width: 160px;
-  border-radius: 50%;
+  border-radius: 10%;
   border: 3px solid var(--primary-color);
 }
 
 .about-details {
+  /* flex: 1 1 300px; */
   list-style: none;
   padding: 0;
+  margin: 0;
   color: var(--text-muted);
 }
 
@@ -49,20 +62,22 @@ main {
   margin-bottom: 0.5rem;
 }
 
-/* ABOUT BOTTOM BIO */
 .about-bottom {
   margin-top: 2rem;
 }
+
 .about-bio {
   font-size: 1rem;
   color: var(--text-light);
+  margin-bottom: 1rem;
 }
 
-/* SOCIAL ICONS */
+/* === SOCIAL ICONS === */
 .social-links {
-  margin-top: 1rem;
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-links img {
@@ -74,7 +89,7 @@ main {
   transform: scale(1.2);
 }
 
-/* SKILLS SECTION */
+/* === SKILLS SECTION === */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -84,9 +99,9 @@ main {
 
 .skills-category {
   flex: 1 1 220px;
-  background-color: var(--bg-surface);
   padding: 1rem;
   border-radius: 0.5rem;
+  background-color: var(--bg-surface);
 }
 
 .skills-category h3 {
@@ -96,7 +111,8 @@ main {
 
 .skills-category ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
   color: var(--text-muted);
 }
 
@@ -104,20 +120,37 @@ main {
   margin-bottom: 0.4rem;
 }
 
-/* PROJECTS */
+/* === PROJECTS SECTION === */
 .project-list {
   padding-left: 1rem;
   color: var(--text-light);
 }
+
 .project-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* CV DOWNLOAD */
+/* === EXPERIENCE SECTION === */
+#experience-list .experience-item {
+  margin-bottom: 1.5rem;
+}
+
+/* === CV SECTION === */
+.section--cv {
+  text-align: center;
+}
+
 .section--cv button {
   margin-top: 1rem;
 }
 
+/* === EXTRACURRICULAR === */
+#extracurricular-list {
+  padding-left: 1rem;
+  color: var(--text-light);
+}
+
+/* === BACK TO TOP BUTTON === */
 #backToTop {
   position: fixed;
   bottom: 2rem;

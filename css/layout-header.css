@@ -23,6 +23,9 @@
 #splash-bubble p {
   	margin: 0;
 }
+.hidden {
+	display: none;
+}
 
 /* ── Overlay Layout ─────────────────────── */
 #splash-overlay {

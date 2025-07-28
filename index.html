@@ -16,78 +16,11 @@
     <link rel="stylesheet" href="css/layout-footer.css">
 </head>
 
-<script>
-    window.addEventListener("DOMContentLoaded", () => {
-        // document.body.classList.add("splash-animate");
-        // document.body.classList.add("text-fade-animate");
-        setTimeout(() => {
-            document.getElementById("splash-overlay")?.remove();
-        }, 3000);
+<script src="js/splashHeaderController.js" defer></script>
+<script src="js/navController.js" defer></script>
+<script src="js/cvDownloadHandler.js" defer></script>
+<script type="module" src="js/dataLoader.js" defer></script>
 
-        let nav = document.getElementById('site-nav');
-        // let sideBtn
-        let lastScrollY = window.scrollY;
-        let isAsideOut = false;
-
-        // Scroll-based bubble hide
-        window.addEventListener("scroll", () => {
-            const bubble = document.getElementById("splash-bubble");
-            if (!bubble) return;
-            if (window.scrollY > 10) {
-                bubble.classList.add("bubble-hide");
-            } else {
-                bubble.classList.remove("bubble-hide");
-            }
-
-            const currentScroll = window.scrollY;
-
-            if (currentScroll > 40 && !isAsideOut) {
-                nav.classList.remove('aside-in');
-                nav.classList.add('aside-out');
-                isAsideOut = true;
-            } else if (currentScroll <= 40 && isAsideOut) {
-                nav.classList.remove('aside-out');
-                nav.classList.add('aside-in');
-                isAsideOut = false;
-            }
-
-            if (window.scrollY > 200) {
-                backToTopBtn.classList.add("visible");
-                } else {
-                backToTopBtn.classList.remove("visible");
-            }
-
-            lastScrollY = currentScroll;
-        });
-
-        document.getElementById("nav-toggle").addEventListener("click", () => {
-            let navBox = document.getElementById("vertical-nav-container");
-            if (nav.classList.contains("aside-out")) {
-
-                nav.classList.remove("aside-out");
-                nav.classList.add("aside-in");
-                navBox.classList.add("blur");
-                isAsideOut = false;
-            } else {
-
-                nav.classList.remove("aside-in");
-                nav.classList.add("aside-out");
-                navBox.classList.remove("blur");
-                isAsideOut = true;
-            }
-        });
-
-        const backToTopBtn = document.getElementById("backToTop");
-
-        window.addEventListener("scroll", () => {
-            
-        });
-
-        backToTopBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    });
-</script>
 
 <body>
     <div id="splash-overlay"></div>
@@ -96,7 +29,7 @@
         <p>Software Engineering Student</p>
     </header>    
 
-    <div id="vertical-nav-container">
+    <div id="vertical-nav-container", class="active">
         <nav id="site-nav">
             <ul class="nav-list">
             <li><a href="#about">About Me</a></li>
@@ -109,6 +42,7 @@
             </ul>
         </nav>
     </div>
+
     <div id="nav-toggle" class="nav-toggle">
         <img src="assets/icons/icon_menu.png" alt="Menu Icon">
     </div>
@@ -117,85 +51,52 @@
     <main>
         <!-- ABOUT ME -->
         <section id="about" class="section section--about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-top d-flex flex-center">
-            <div class="about-photo">
-                <img src="./assets/profile.jpg" alt="Photo of Dean van Zyl in formal attire">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-top d-flex flex-center">
+                    <div class="about-photo">
+                        <img src="./assets/profile.jpg" alt="Photo of Dean van Zyl in formal attire">
+                    </div>
+                    <ul class="about-details">
+                        <!-- JS will inject list items here -->
+                    </ul>
+                </div>
+                <div class="about-bottom">
+                    <p class="about-bio">
+                        <!-- JS will inject summary here -->
+                    </p>
+                    <div class="social-links">
+                        <!-- JS will inject social icons here -->
+                    </div>
+                </div>
             </div>
-            <ul class="about-details">
-                <li><strong>Full Name:</strong> Dean Jacobus Andreas van Zyl</li>
-                <li><strong>Nationality:</strong> South African</li>
-                <li><strong>Languages:</strong> English, Afrikaans</li>
-                <li><strong>Location:</strong> Pretoria, South Africa</li>
-                <li><strong>Timezone:</strong> SAST (GMT+2)</li>
-                <li><strong>Age:</strong> <span id="age_display"></span></li>
-                <li><strong>Gender:</strong> Male</li>
-            </ul>
-            </div>
-            <div class="about-bottom">
-            <p class="about-bio">
-                As a second-year student at Belgium Campus ITversity, I am pursuing a
-                Bachelor of Computing degree specialising in Software Engineering.
-                My academic pursuits are driven by a profound interest in technology,
-                particularly Artificial Intelligence. I'm enthusiastic about
-                challenges and committed to turning my ambitions into reality.
-            </p>
-            <div class="social-links">
-                <a href="https://github.com/Zeldean" target="_blank" aria-label="GitHub profile">
-                <img src="assets/icons/icon_github.png" alt="GitHub logo">
-                </a>
-                <a href="https://linkedin.com/in/dean-van-zyl-971ab9253" target="_blank" aria-label="LinkedIn profile">
-                <img src="assets/icons/icon_linkedin.png" alt="LinkedIn logo">
-                </a>
-                <a href="https://reddit.com/user/Familiar_Bee9566" target="_blank" aria-label="Reddit profile">
-                <img src="assets/icons/icon_reddit.png" alt="Reddit logo">
-                </a>
-            </div>
-            </div>
-        </div>
         </section>
 
         <!-- SKILLS -->
         <section id="skills" class="section section--skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-            <div class="skills-category">
-                <h3>Programming</h3>
-                <ul>
-                <li>MySQL</li>
-                <li>JavaScript</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>C#</li>
-                <li>Python</li>
-                </ul>
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <!-- JS will inject skills categories here -->
+                </div>
             </div>
-            <div class="skills-category">
-                <h3>Personal</h3>
-                <ul>
-                <li>Critical Thinking</li>
-                <li>Time Management</li>
-                <li>Positive Attitude</li>
-                <li>Goal-Oriented</li>
-                </ul>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section section--experience">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div id="experience-list">
+                    <!-- JS will inject experience here -->
+                </div>
             </div>
-            </div>
-        </div>
         </section>
 
         <!-- EDUCATION -->
         <section id="education" class="section section--education">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <p><strong>Bachelor of Computing</strong> — Software Engineering, Belgium Campus ITversity</p>
-            <p><strong>Hoërskool Wonderboom</strong> — Matric 2022</p>
-            <h3>Awards & Honors</h3>
-            <ul>
-            <li>Information Technology Subject Award (2020–2021)</li>
-            <li>Engineering Graphics & Design Subject Award (2020)</li>
-            </ul>
+            <div id="education-list"><!-- JS will inject education here --></div>
         </div>
         </section>
 
@@ -203,35 +104,27 @@
         <section id="projects" class="section section--projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
-            <ul class="project-list">
-            <li><a href="https://github.com/Zeldean/WPR281-Project" target="_blank">WPR281 Assignment (BCIT)</a></li>
-            <li><a href="https://github.com/Zeldean/Vhalus-Codex" target="_blank">Vhalus Codex</a></li>
-            <li><a href="https://github.com/Zeldean" target="_blank">More on GitHub</a></li>
-            </ul>
+            <ul class="project-list"><!-- JS will inject projects here --></ul>
         </div>
         </section>
+
 
         <!-- EXTRACURRICULAR -->
         <section id="extracurricular" class="section section--extracurricular">
         <div class="container">
             <h2 class="section-title">Extracurricular Activities</h2>
-            <ul>
-            <li>Orators Club</li>
-            <li>First Aid Team (Hoërskool Wonderboom)</li>
-            <li>Marketing Team (Hoërskool Wonderboom)</li>
-            <li>Field‑Target Shooting — International Competition, England (2019)</li>
-            </ul>
+            <ul id="extracurricular-list"><!-- JS will inject here --></ul>
         </div>
         </section>
 
         <!-- CONTACT -->
         <section id="contact" class="section section--contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p><strong>Phone:</strong> +27 71 375 6131</p>
-            <p><strong>Email:</strong> <a href="mailto:deanvanzyl37@gmail.com">deanvanzyl37@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dean-van-zyl-971ab9253" target="_blank">linkedin.com/in/dean-van-zyl-971ab9253</a></p>
-        </div>
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div id="contact-info">
+                    <!-- JS will inject contact info here -->
+                </div>
+            </div>
         </section>
 
         <!-- DOWNLOAD CV -->
@@ -242,27 +135,15 @@
             </div>
         </section>
 
+        <!-- TO TOP BTN -->
         <button id="backToTop" class="btn btn-outline btn-small" aria-label="Back to top">
             ↑ Top
         </button>
+
     </main>
 
     <footer class="site-footer">
         <p>© 2024 Dean van Zyl. All Rights Reserved.</p>
-    </footer>
-
-  <!-- JavaScript -->
-  <script src="js/script.js" type="module"></script>
-  <script src="js/page_load.js"></script>
-  <script>
-    document.getElementById('downloadCv').addEventListener('click', () => {
-      const a = document.createElement('a');
-      a.href = 'assets/dean_van_zyl_cv.pdf';
-      a.download = 'Dean_van_Zyl_CV.pdf';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    });
-  </script>
+    </footer>  
 </body>
 </html>
