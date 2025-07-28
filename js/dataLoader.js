@@ -2,7 +2,7 @@ import { calculateAge } from './utils.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const res = await fetch('./../assets/dean_data.json');
+    const res = await fetch('./assets/dean_data.json');
     const data = await res.json();
 
     populateAbout(data.personal, data.bio, data.contacts.sosials);
