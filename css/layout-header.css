@@ -1,8 +1,3 @@
-/* ================================
-   splash.css — layout + movement only
-   ================================ */
-
-/* ── Splash Bubble Layout ───────────────── */
 #splash-bubble {
 	background-color: var(--bg-glass-dark);
 	border-radius: 3rem;
@@ -18,7 +13,12 @@
 	animation: bubbleUp 1.8s ease-in-out forwards;
 }
 #splash-bubble h1 {
-  	margin: 0;
+  margin: 0;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90vw;
 }
 #splash-bubble p {
   	margin: 0;
@@ -65,4 +65,13 @@
 	opacity: 0;
 	transition: transform 0.3s ease, opacity 0.4s ease;
 	pointer-events: none;
+}
+
+#splash-subtxt {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#splash-subtxt.fade-out {
+  opacity: 0;
 }
