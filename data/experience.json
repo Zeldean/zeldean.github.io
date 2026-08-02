@@ -1,0 +1,19 @@
+{
+  "experience": [
+    {
+      "company": "Impression Signatures (iOCO)",
+      "role": "Intern",
+      "start_date": "2026-02",
+      "end_date": "Present",
+      "location": "Midrand"
+    },
+    {
+      "company": "Freelance",
+      "role": "Software Developer",
+      "start_date": "2024-01",
+      "end_date": "2025",
+      "location": "Pretoria, South Africa",
+      "description": "Develop bespoke software for small businesses. Highlights include the Mikado quote automation tool and the Ruisseaux baby-product site."
+    }
+  ]
+}

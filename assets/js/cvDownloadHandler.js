@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
             const a = document.createElement('a');
-            a.href = 'assets/dean_van_zyl_cv.pdf';
+            a.href = `${window.__assetPrefix || './'}assets/dean_van_zyl_cv.pdf`;
             a.download = 'Dean_van_Zyl_CV.pdf';
             document.body.appendChild(a);
             a.click();

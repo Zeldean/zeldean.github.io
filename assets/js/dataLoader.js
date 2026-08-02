@@ -1,49 +1,64 @@
-import { calculateAge } from './utils.js';
+
+import { calculateAge } from './utils/ageCalc.js';
+const prefix = window.__assetPrefix || './';
+
+const ICON_MAP = {
+  github: 'icon_github.png',
+  linkedin: 'icon_linkedin.png',
+  reddit: 'icon_reddit.png',
+  website: 'icon_globe.png'
+};
 
 window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const res = await fetch('./assets/dean_data.json');
-    const data = await res.json();
-
-    populateAbout(data.personal, data.bio, data.contacts.sosials);
-    populateSkills(data.skills);
-    populateEducation(data.education);
-    populateProjects(data.projects);
-    populateExperience(data.experience);
-    // populateExtracurricular(data.extracurricular);
-    populateContact(data.contacts);
+    await populateAbout();
+    // populateSkills(data.skills);
+    // populateEducation(data.education);
+    // populateProjects(data.projects);
+    // populateExperience(data.experience);
+    // populateContact(data.contacts);
     
   } catch (err) {
-    console.error('Failed to load data:', err);
+    console.error('1 - Failed to load data:', err);
   }
 });
 
-function populateAbout(personal, bio, socials) {
-  const details = document.querySelector('.about-details');
-  details.innerHTML = `
-    <li><strong>Full Name:</strong> ${personal.first_name} ${personal.middle_names} ${personal.surname}</li>
-    <li><strong>Nationality:</strong> South African</li>
-    <li><strong>Languages:</strong> ${[personal.home_language, ...personal.other_languages].join(', ')}</li>
-    <li><strong>Location:</strong> ${personal.city}, ${personal.country}</li>
-    <li><strong>Timezone:</strong> ${personal.timezone}</li>
-    <li><strong>Age:</strong> ${calculateAge(personal.dob)}</li>
-    <li><strong>Gender:</strong> ${personal.gender}</li>
-  `;
+async function populateAbout() {
+  console.info("START populateAbout")
 
-  document.querySelector('.about-bio').textContent = bio.summary;
+  try {
+    
+    // Parallel fetch all data
+    const [{about}, {bio: {summary}}, {contacts: {socials}}] = await Promise.all([
+      fetch(`${prefix}data/about.json`).then(r => r.json()),
+      fetch(`${prefix}data/bio.json`).then(r => r.json()),
+      fetch(`${prefix}data/contacts.json`).then(r => r.json())
+    ]);
 
-  const socialLinks = document.querySelector('.social-links');
-  const iconMap = {
-    github: 'icon_github.png',
-    linkedin: 'icon_linkedin.png',
-    reddit: 'icon_reddit.png',
-    website: 'icon_globe.png'
-  };
-  socialLinks.innerHTML = Object.entries(socials).map(([key, link]) => `
-    <a href="${link}" target="_blank" aria-label="${key} profile">
-      <img src="assets/icons/${iconMap[key] || 'icon_link.png'}" alt="${key} logo">
-    </a>
-  `).join('');
+    document.querySelector('.about-details').innerHTML = `
+      <li><strong>Full Name:</strong> ${about.first_name} ${about.middle_names} ${about.surname}</li>
+      <li><strong>Nationality:</strong> ${about.nationality}</li>
+      <li><strong>Languages:</strong> ${about.languages.join(", ")}</li>
+      <li><strong>Location:</strong> ${about.city}, ${about.country}</li>
+      <li><strong>Timezone:</strong> ${about.timezone}</li>
+      <li><strong>Age:</strong> ${calculateAge(about.dob)}</li>
+      <li><strong>Gender:</strong> ${about.gender}</li>
+    `;
+
+    document.querySelector('.about-bio').textContent = summary;
+
+    const socialLinks = Object.entries(socials).map(([key, {url}]) => `
+      <a href="${url}" target="_blank" aria-label="${key} profile">
+        <img src="${prefix}assets/icons/${ICON_MAP[key] || 'icon_link.png'}" alt="${key} logo">
+      </a>
+    `).join('');
+    document.querySelector('.social-links').innerHTML = socialLinks;
+
+  } catch (err) {
+    console.error('11 - Failed to load data:', err);
+  }
+
+  console.info("END populateAbout")
 }
 
 function populateSkills(skills) {

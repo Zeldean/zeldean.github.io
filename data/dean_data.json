@@ -80,7 +80,7 @@
 			"name": "Quote-Maker Automation (Mikado)",
 			"date": "2025-07",
 			"tech": ["C#", ".NET Framework", "Windows Forms", "SQL Server"],
-			"description": "Desktop tool that auto-generates customer quotes from a parts database, cutting prep time by ~60 % and eliminating manual calculation errors.",
+			"description": "Desktop tool that auto-generates customer quotes from a parts database, cutting prep time by ~60% and eliminating manual calculation errors.",
 			"link": "private"
 		},
 		{

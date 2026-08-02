@@ -1,18 +1,4 @@
 {
-    "personal": {
-        "first_name": "Dean",
-        "middle_names": "Jacobus Andreas",
-        "surname": "van Zyl",
-        "dob": "2004-11-22",
-        "gender": "Male",
-        "city": "Pretoria",
-        "country": "South Africa",
-        "timezone": "SAST (GMT+2)",
-        "languages": [
-            "Afrikaans",
-            "English"
-        ]
-    },
     "contacts": {
         "email": "deanvanzyl37@gmail.com",
         "phone": "+27 71 375 6131",
@@ -28,10 +14,6 @@
             "reddit": {
                 "url": "https://reddit.com/user/Familiar_Bee9566",
                 "icon": "icons/icon_reddit.png"
-            },
-            "youtube": {
-                "url": "https://youtube.com/@Zeldean",
-                "icon": "icons/icon_youtube.png"
             },
             "website": {
                 "url": "https://zeldean.me",
