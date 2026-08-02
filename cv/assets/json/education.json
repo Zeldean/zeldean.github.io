@@ -1,0 +1,44 @@
+{
+    "education": [
+        {
+            "institution": "Belgium Campus iTversity",
+            "logo": "icons/logo_belgiumcampus.png",
+            "degree": "BComp Computer Science — Software Engineering",
+            "start_year": 2023,
+            "expected_grad": 2026,
+            "awards": [
+                "Top 3 in Major 2023",
+                "Dean's List 2023-2024"
+            ],
+            "performance": {
+                "subjects_exempted": 0,
+                "subjects_passed": 32,
+                "distinctions": 32,
+                "subjects_failed": 0,
+                "outstanding_subjects": 0,
+                "weighted_average": "83.4%",
+                "credits_achieved": 277
+            }
+        },
+        {
+            "institution": "Hoërskool Wonderboom",
+            "logo": "icons/logo_wonderboom.png",
+            "degree": "National Senior Certificate (Matric)",
+            "start_year": 2018,
+            "expected_grad": 2022,
+            "awards": [
+                "IT Subject Award 2020-2021",
+                "EGD Subject Award 2020"
+            ],
+            "performance": {
+                "Afrikaans Home Language": "72%",
+                "English First Additional Language": "70%",
+                "Mathematics": "70%",
+                "Life Orientation": "91%",
+                "Information Technology": "89%",
+                "Engineering Graphics & Design": "87%",
+                "Physical Science": "79%"
+            }
+        }
+    ]
+}

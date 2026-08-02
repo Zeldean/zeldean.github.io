@@ -1,0 +1,35 @@
+{
+    "title": "Software Engineering Student",
+    "focus": "Machine Learning · Productivity Automation · Java Game-Modding",
+    "summary": "I'm Dean van Zyl, a third-year Bachelor of Computing student at Belgium Campus iTversity, focusing on Software Engineering and Machine Learning. I enjoy working on practical projects, from building automation tools that save time to exploring smaller applications of machine learning in everyday tasks.\nRight now, my main goal is to gain real-world experience and figure out where I want to specialize. Outside of coding, I'm interested in 3D printing for functional designs and creating self-sustaining ecosystems, like aquariums and reptile enclosures that run naturally with minimal intervention.",
+    "bio_template": {
+        "fullName": "Dean van Zyl",
+        "status": [
+            "third-year Computing student at Belgium Campus ITversity",
+            "Software Engineer",
+            "Intern",
+            "Junior Developer"
+        ],
+        "specializations": [
+            "Software Engineering",
+            "Machine Learning"
+        ],
+        "interests": [
+            "general AI",
+            "automation with ML",
+            "productivity tools (e.g., Arch Linux + Hyprland setup)"
+        ],
+        "currentFocus": [
+            "gaining real-world experience",
+            "applying my skills in real-world contexts"
+        ],
+        "hobbies": [
+            "designing functional 3D-printed mini ecosystems (aquariums, terrariums)"
+        ],
+        "uniqueTrait": "my ability to hyper-fixate persistently on seemingly unrelated topics",
+        "callToAction": [
+            "Let's connect to explore collaboration opportunities.",
+            "Check out my portfolio at https://zeldean.me"
+        ]
+    }
+}

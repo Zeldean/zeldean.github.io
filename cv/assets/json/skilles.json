@@ -1,0 +1,35 @@
+{
+	"languages": [
+		"C#",
+		"Java 17",
+		"JavaScript (ES6)",
+		"SQL",
+		"Python"
+	],
+  	"frameworks": [
+		"Windows Forms",
+		"Java Swing",
+		"JSP / Servlets",
+		"Express.js",
+		"EJS",
+		"Bootstrap"
+	],
+  	"databases": [
+		"PostgreSQL",
+		"SQL Server",
+		"SQLite",
+		"Apache Derby (JavaDB)",
+		"MongoDB (replica & sharding)"
+	],
+  	"tools": [
+		"Git & GitHub",
+		"Visual Studio",
+		"NetBeans",
+		"VS Code",
+		"Apache Tomcat",
+		"Node.js + npm",
+		"Nodemon",
+		"Mongoose",
+		"Postman"
+	]
+}

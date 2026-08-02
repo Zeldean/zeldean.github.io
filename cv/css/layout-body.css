@@ -1,0 +1,172 @@
+/* ================================
+   layout-body.css (Updated Layout Only)
+   ================================ */
+
+main {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Shared section styles */
+.section {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--bg-alt);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+/* === ABOUT SECTION === */
+.about-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo {
+  /* flex: 0 0 160px; */
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img {
+  max-width: 160px;
+  border-radius: 10%;
+  border: 3px solid var(--primary-color);
+}
+
+.about-details {
+  /* flex: 1 1 300px; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.about-details li {
+  margin-bottom: 0.5rem;
+}
+
+.about-bottom {
+  margin-top: 2rem;
+}
+
+.about-bio {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* === SOCIAL ICONS === */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* === SKILLS SECTION === */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skills-category {
+  flex: 1 1 220px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-surface);
+}
+
+.skills-category h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+}
+
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.skills-category li {
+  margin-bottom: 0.4rem;
+}
+
+/* === PROJECTS SECTION === */
+.project-list {
+  padding-left: 1rem;
+  color: var(--text-light);
+}
+
+.project-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* === EXPERIENCE SECTION === */
+#experience-list .experience-item {
+  margin-bottom: 1.5rem;
+}
+
+/* === CV SECTION === */
+.section--cv {
+  text-align: center;
+}
+
+.section--cv button {
+  margin-top: 1rem;
+}
+
+/* === EXTRACURRICULAR === */
+#extracurricular-list {
+  padding-left: 1rem;
+  color: var(--text-light);
+}
+
+/* === BACK TO TOP BUTTON === */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#backToTop:hover {
+  transform: translateY(-4px);
+}
